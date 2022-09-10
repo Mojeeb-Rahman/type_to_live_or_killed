@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Type to Live or Killed</title>
+    <link rel="stylesheet" href="./style/main.css" />
+  </head>
+  <body>
+    <div id="welcome_screen" class="screen">
+      <h1>Type to Live or Killed</h1>
+      <h3>Joined of Fun Gaming Experience with Education and Training World</h3>
+    </div>
+    <div id="user_profile_input_screen" class="screen">
+      <form id="profile_data_form">
+        <h2>Type to Live or Killed</h2>
+        <fieldset id="fieldset">
+          <legend>Who are you?</legend>
+
+          <div>
+            <label for="name">Name of Player:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              placeholder="Mojeeb Rahman"
+            />
+          </div>
+          <div>
+            <label for="age">Age:</label><br />
+            <input
+              type="number"
+              id="age"
+              name="age"
+              placeholder="Age"
+              required
+            />
+          </div>
+          <div>
+            <div><label for="dari">Gender:</label></div>
+            <div>
+              <input type="radio" id="male" name="gender" checked value="1" />
+              <label for="gender">Male</label><br />
+              <input type="radio" id="female" name="gender" value="0" />
+              <label for="english">Female</label><br />
+            </div>
+          </div>
+          <div>
+            <div><label for="dari">Language to Type:</label></div>
+            <div>
+              <input type="radio" id="dari" name="type_language" value="Dari" />
+              <label for="dari">Dari</label><br />
+              <input
+                type="radio"
+                id="english"
+                checked
+                name="type_language"
+                value="English"
+              />
+              <label for="english">English</label><br />
+              <input
+                type="radio"
+                id="deutsche"
+                name="type_language"
+                value="Deutsche"
+              />
+              <label for="deutsche">Deutsche (German)</label>
+            </div>
+          </div>
+
+          <div>
+            <label for="wpm">Typing Speed to Achieve:</label><br />
+
+            <select name="wpm" id="wpm">
+              <option value="volvo">15 words per minute (Elementary)</option>
+              <option value="saab">
+                30 words per minute (Intermediate level)
+              </option>
+              <option value="mercedes">40 words per minute (Normal)</option>
+              <option value="audi">60 words per minute (High Level)</option>
+            </select>
+          </div>
+
+          <button type="submit">Save and Start the Game!</button>
+        </fieldset>
+      </form>
+    </div>
+    <div id="game_screen" class="screen">
+      <div id="result_header"></div>
+      <canvas width="1000" height="500"></canvas>
+    </div>
+    <div id="game_over_screen" class="screen">
+      <h1>Game Over!</h1>
+    </div>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
