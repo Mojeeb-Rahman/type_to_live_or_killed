@@ -120,6 +120,7 @@ export default class Game {
   }
 
   startGame() {
+    // fullScreen(bodyElement);
     this.reset();
     this.addEnemy();
     this.enableControls();

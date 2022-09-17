@@ -1,3 +1,4 @@
+export const bodyElement = document.querySelector("body");
 export const welcomeScreenElement = document.querySelector("#welcome_screen");
 export const userProfileInputScreenElement = document.querySelector(
   "#user_profile_input_screen"
@@ -38,6 +39,18 @@ export function gameOverScreen() {
   gameScreenElement.style.display = "none";
   gameOverScreenElement.style.display = "flex";
   welcomeScreenElement.style.display = "none";
+}
+
+export function fullScreen(elem) {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) {
+    /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) {
+    /* IE11 */
+    elem.msRequestFullscreen();
+  }
 }
 
 export function gameOverPrintResult(result) {
