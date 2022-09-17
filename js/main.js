@@ -1,4 +1,5 @@
 import Game from "./game.js";
+import { tryAgain } from "./screen.js";
 
 // for development
 // import { gameScreen } from "./screen.js";
@@ -8,3 +9,8 @@ import Game from "./game.js";
 
 const init = new Game();
 init.initstart();
+
+function restart() {
+  location.reload();
+}
+tryAgain(restart);

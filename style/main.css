@@ -4,8 +4,9 @@ body {
   font-size: 1.2rem;
   margin: 0px;
   padding: 0px;
-  width: 100%;
-  height: 100%;
+  overflow: hidden;
+  /* width: 100%;
+  height: 100%; */
 }
 
 .screen {
@@ -22,7 +23,12 @@ select {
 }
 
 canvas {
-  /* border: 1px solid #444; */
+  /* border: 1px solid rgba(66, 173, 16, 0.644); */
+  background-color: rgba(69, 108, 207, 0.76);
+  background-image: url("../assets/background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+
   width: 100%;
   height: 100%;
 }
@@ -82,7 +88,7 @@ canvas {
   flex-direction: column;
 }
 
-#result_header {
+/* #result_header {
   height: 60px;
   width: 1000px;
   border: 1px solid #444;
@@ -94,7 +100,4 @@ canvas {
   align-items: stretch;
 
   padding-top: 16px;
-}
-
-#result_header span {
-}
+} */

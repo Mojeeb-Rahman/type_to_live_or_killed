@@ -6,6 +6,14 @@ export const gameScreenElement = document.querySelector("#game_screen");
 export const gameOverScreenElement =
   document.querySelector("#game_over_screen");
 
+export const tryAgainButton = document.querySelector("#try_again");
+
+export function tryAgain(restart) {
+  tryAgainButton.addEventListener("click", (event) => {
+    restart();
+  });
+}
+
 export function startScreen() {
   userProfileInputScreenElement.style.display = "none";
   gameScreenElement.style.display = "none";
@@ -30,4 +38,20 @@ export function gameOverScreen() {
   gameScreenElement.style.display = "none";
   gameOverScreenElement.style.display = "flex";
   welcomeScreenElement.style.display = "none";
+}
+
+export function gameOverPrintResult(result) {
+  const gameOverResult = gameOverScreenElement.querySelector("h4");
+  gameOverResult.innerHTML =
+    result.name +
+    " <br/> | Game Overed in Round: " +
+    result.level +
+    " | in " +
+    result.time +
+    " Minute | <br/>  Accuracy: " +
+    result.accuracy +
+    "<br/>   Correctly typed Characters: " +
+    result.correct_char +
+    "<br/>   Total typed Characters: " +
+    result.total_char;
 }

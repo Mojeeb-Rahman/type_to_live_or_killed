@@ -11,22 +11,22 @@ class Profile {
     this.p_languageToType;
     this.p_goalWPM;
   }
-  printProfile() {
-    console.log("ok");
-    const profileHeader = gameScreenElement.querySelector("#result_header");
-    profileHeader.innerHTML = `
-    <span>${
-      this.p_gender === "1" ? "Mr. " + this.p_name : "Mrs. " + this.p_name
-    }</span>
-    <span>  |  ${this.p_age} Years  | </span>
-    <span>Typing Language: ${this.p_languageToType}</span>`;
-  }
+  // printProfile() {
+  //   console.log("ok");
+  //   const profileHeader = gameScreenElement.querySelector("#result_header");
+  //   profileHeader.innerHTML = `
+  //   <span>${
+  //     this.p_gender === "1" ? "Mr. " + this.p_name : "Mrs. " + this.p_name
+  //   }</span>
+  //   <span>  |  ${this.p_age} Years  | </span>
+  //   <span>Typing Language: ${this.p_languageToType}</span>`;
+  // }
 
   hundleProfileDataSubmit(event) {
     event.preventDefault();
     const formData = new FormData(this.profileDataForm);
     this.p_name = formData.get("name");
-    this.p_goalWPM = formData.get("wpm");
+    this.p_goalWPM = Number(formData.get("wpm"));
     this.p_age = formData.get("age");
     this.p_gender = formData.get("gender");
     this.p_languageToType = formData.get("type_language");
@@ -37,7 +37,7 @@ class Profile {
   AddEventHundler() {
     this.profileDataForm.addEventListener("submit", (event) => {
       this.hundleProfileDataSubmit(event);
-      this.printProfile();
+      // this.printProfile();
       this.game.startGame();
     });
   }

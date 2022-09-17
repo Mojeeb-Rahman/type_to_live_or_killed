@@ -74,12 +74,12 @@
             <label for="wpm">Typing Speed to Achieve:</label><br />
 
             <select name="wpm" id="wpm">
-              <option value="volvo">15 words per minute (Elementary)</option>
-              <option value="saab">
+              <option value="0.12">15 words per minute (Elementary)</option>
+              <option value="0.14">
                 30 words per minute (Intermediate level)
               </option>
-              <option value="mercedes">40 words per minute (Normal)</option>
-              <option value="audi">60 words per minute (High Level)</option>
+              <option value="0.16">40 words per minute (Normal)</option>
+              <option value="0.20">60 words per minute (High Level)</option>
             </select>
           </div>
 
@@ -88,11 +88,13 @@
       </form>
     </div>
     <div id="game_screen" class="screen">
-      <div id="result_header"></div>
+      <!-- <div id="result_header"></div> -->
       <canvas width="1000" height="500"></canvas>
     </div>
     <div id="game_over_screen" class="screen">
       <h1>Game Over!</h1>
+      <h4></h4>
+      <button type="button" id="try_again">Try Again!</button>
     </div>
 
     <script type="module" src="./js/main.js"></script>
